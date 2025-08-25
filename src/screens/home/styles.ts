@@ -1,0 +1,125 @@
+import { Dimensions, StyleSheet } from "react-native";
+export const windowWidth = Dimensions.get("window").width;
+export const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    backgroundColor: "black",
+  },
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 80,
+  },
+  productContainer: {
+    borderRadius: 12,
+    width: windowWidth / 2 - 20,
+    marginHorizontal: 6,
+  },
+  name: {
+    color: "#FFF",
+    fontFamily: "Syne-Regular",
+    fontSize: 16,
+    fontStyle: "normal",
+  },
+  username: {
+    color: "#FFF",
+    fontFamily: "Poppins",
+    fontSize: 12,
+    fontStyle: "normal",
+    marginTop: 5,
+  },
+  tagRow: {
+    flexDirection: "row",
+    // flexWrap: "wrap",
+    marginBottom: 6,
+  },
+  tag: {
+    backgroundColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 6,
+    paddingVertical: 4,
+    borderRadius: 4,
+    marginRight: 6,
+    marginTop: 8,
+    marginBottom: 12,
+  },
+  tagText: {
+    color: "#fff",
+    fontSize: 12,
+    fontFamily: "Poppins",
+  },
+  statsRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 8,
+    flexWrap: "wrap",
+  },
+  statsText: {
+    color: "white",
+    fontSize: 13,
+    marginLeft: 4,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 13,
+    marginRight: 4,
+    fontFamily: "Inter",
+    marginHorizontal: 10,
+  },
+  button: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(34, 34, 34, 0.50)",
+    borderRadius: 20,
+    paddingVertical: 8,
+    borderWidth: 1,
+    height: 36,
+    borderColor: "rgba(255, 255, 255, 0.20)",
+  },
+  bookmark: {
+    position: "absolute",
+    top: 12,
+    right: 12,
+    backgroundColor: "rgba(0,0,0,0.4)",
+    padding: 10,
+    borderRadius: 20,
+  },
+  image: {
+    overflow: "hidden",
+    borderRadius: 12,
+  },
+  gradientOverlay: {
+    justifyContent: "flex-end",
+    padding: 12,
+  },
+  influenceText: {
+    fontFamily: "Syne-SemiBold",
+    color: "#FFFFFF40",
+    fontSize: 32,
+    // fontWeight: 700,
+  },
+  craftedText: {
+    fontFamily: "Poppins-SemiBold",
+    color: "#FFFFFF75",
+    fontSize: 16,
+    fontWeight: 700,
+    verticalAlign: "middle",
+    marginTop: 6,
+  },
+  madeInIndia: {
+    fontFamily: "Poppins",
+    fontSize: 16,
+    color: "#FFFFFF70",
+    marginTop: 15,
+    fontStyle: "italic",
+    marginBottom: 50,
+  },
+  NurddText: {
+    fontSize: 16,
+    color: "#4B4B4B", // Gray for normal text
+    fontWeight: 600,
+    marginTop: 7,
+    marginLeft: 5,
+  },
+  Emogi: { fontSize: 16, marginTop: 4, marginLeft: 7 },
+});
