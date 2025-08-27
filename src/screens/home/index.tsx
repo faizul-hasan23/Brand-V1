@@ -11,52 +11,20 @@ import { styles, windowWidth } from "./styles";
 import InstagramIcon from "../../assets/icons/InstagramIcon";
 import TrandingIcon from "../../assets/icons/trandingIcon";
 import ForwardIcon from "../../assets/icons/forwardIcon";
-import TickRightIcon from "../../assets/icons/tickRightIcon";
 import ShareIcon from "../../assets/icons/shareIcon";
 import { LinearGradient } from "expo-linear-gradient";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import RobotCrad from "../../components/RobotCard";
 import IndiaFlagIcon from "../../assets/icons/IndiaFlagIcon";
 import MaskedView from "@react-native-masked-view/masked-view";
+import { useState } from "react";
+import DummyData from "../../utils/DummyData.json";
+import { UserItemprops } from "../../utils/CommonTypes";
+import VerificationtIcon from "../../assets/icons/verificationIcon";
 const HomeScreen = () => {
+  const [data, setData] = useState<UserItemprops[]>(DummyData);
   const insets = useSafeAreaInsets();
-  interface props {
-    name: string;
-    username: string;
-    tags: Array<string>;
-    followers: string;
-    rating: string;
-    image?: string;
-  }
-  const DummyData: Array<props> = [
-    {
-      name: "Priya Sharma",
-      username: "@priyalifestyle",
-      tags: ["Lifestyle", "Fashion", "Beauty", "+3"],
-      followers: "156k",
-      rating: "5.2%",
-      image:
-        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800",
-    },
-    {
-      name: "Rohan Sharma",
-      username: "@priyalifestyle",
-      tags: ["Lifestyle", "Fashion", "+3"],
-      followers: "156k",
-      rating: "5.2%",
-      image:
-        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800",
-    },
-    {
-      name: "Rahul Sharma",
-      username: "@priyalifestyle",
-      tags: ["Lifestyle", "Fashion", "+3"],
-      followers: "156k",
-      rating: "5.2%",
-      image:
-        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800",
-    },
-  ];
+
   const renderItem = ({ item, index }: { item: any; index: number }) => {
     return (
       <View style={[styles.container, { marginTop: index === -1 ? 0 : 20 }]}>
@@ -87,7 +55,7 @@ const HomeScreen = () => {
                 }}
               >
                 <Text style={styles.name}>{item.name}</Text>
-                <TickRightIcon />
+                <VerificationtIcon />
               </View>
               <Text style={styles.username}>{item.username}</Text>
               <View style={styles.tagRow}>
@@ -125,7 +93,7 @@ const HomeScreen = () => {
           <SafeAreaView style={styles.container}>
             <RobotCrad />
             <FlatList
-              data={DummyData?.slice(1)}
+              data={data?.slice(1)}
               renderItem={renderItem}
               numColumns={2}
               keyExtractor={(_, index) => `${index}`}
