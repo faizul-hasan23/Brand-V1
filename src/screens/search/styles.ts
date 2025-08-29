@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const styles = StyleSheet.create({
+export const SearchStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#0A0B19",
@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
   listView: {
     flexDirection: "row",
     alignItems: "center",
-    // marginVertical: 3,
+    marginVertical: 3,
   },
   imagestyle: {
     height: 56,
@@ -73,10 +73,9 @@ export const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   iconStyle: {
-    height: 30,
-    width: 30,
-    marginRight: 15,
+    marginRight: 20,
     top: 22,
+    // backgroundColor: "white",
   },
   statsRow: {
     flexDirection: "row",

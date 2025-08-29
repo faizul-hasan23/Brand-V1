@@ -32,6 +32,7 @@ export const newCampaignStyle = StyleSheet.create({
     textAlignVertical: "top",
     height: 50,
     paddingLeft: 20,
+    color: "#FFFFFF",
   },
   descriptionView: {
     borderRadius: 12,
@@ -42,5 +43,6 @@ export const newCampaignStyle = StyleSheet.create({
     fontFamily: "Poppins-Regular",
     height: 100,
     paddingLeft: 20,
+    color: "#FFFFFF",
   },
 });
