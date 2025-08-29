@@ -20,13 +20,15 @@ const Seprator = () => {
         <Text style={SepratorStyles.text}>CREATORS</Text>
       </View>
       <StarVectorIcon style={SepratorStyles.icon} />
-
-      <LinearGradient
-        colors={["#1E1E2E00", "#7D5FFF", "#1E1E2E00"]}
-        start={{ x: 1.7, y: 1.7 }}
-        end={{ x: 0, y: 1 }}
-        style={SepratorStyles.line}
-      />
+      <View style={{ flex: 1, flexDirection: "row" }}>
+        <LinearGradient
+          colors={["#1E1E2E00", "#7D5FFF", "#1E1E2E00"]}
+          locations={[0, 0, 0.7]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1.7, y: 0 }}
+          style={SepratorStyles.line}
+        />
+      </View>
     </View>
   );
 };
